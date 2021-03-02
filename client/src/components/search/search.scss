@@ -1,0 +1,135 @@
+@import "../../styles/";
+
+.search-header {
+  background: $gradient-orange;
+  display: flex;
+  margin: auto;
+  padding: 30px 20px 20px;
+
+  .search {
+    align-items: center;
+    color: $white;
+    display: flex;
+    height: 56px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+
+    &:before {
+      background-color: $white;
+      bottom: 0px;
+      content: "";
+      left: 0px;
+      opacity: 0.2;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    .movie-icon {
+      filter: invert(100%);
+      margin: 0px 10px;
+      width: 30px;
+    }
+
+    &__input {
+      background-color: $transparent;
+      border: none;
+      color: white;
+      font-weight: $font-weight-600;
+      height: 100%;
+      padding-left: 0;
+      width: 100%;
+      z-index: 1;
+
+      &::placeholder {
+        color: $white;
+      }
+
+      &:focus{
+        background: $white;
+        background-image: url("../../assets/icons/movie.svg");
+        background-position: 10px 15px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        color: $black;
+        outline: none;
+        padding-left: 40px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .search-button {
+    background-color: white;
+    border: none;
+    margin-left: 5px;
+    padding: 6px 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline-color: #ff690f;
+    }
+
+    &__icon {
+      filter: invert(63%) sepia(81%) saturate(4808%) hue-rotate(353deg)
+        brightness(100%) contrast(102%);
+    }
+  }
+
+  .options-field {
+    background: $white;
+    box-shadow: 0px 3px 6px -2px $grey-100;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: 2;
+
+    .results {
+      border-top: 1px solid $grey-100;
+      list-style: none;
+      margin: 0px;
+      padding: 0;
+
+      &__title {
+        color: $black;
+        font-size: $font-size-16;
+        font-weight: $font-weight-600;
+      }
+
+      &__rating {
+        font-size: $font-size-12;
+      }
+
+      &__result {
+        color: $grey-900;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px 10px 40px;
+        text-align: left;
+  
+        &:hover {
+          background: $gradient-orange;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+    }
+
+   
+}
+
+.error-message {
+  font-weight: $font-weight-600;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}

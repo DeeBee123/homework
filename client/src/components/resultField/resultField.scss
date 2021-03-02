@@ -1,0 +1,94 @@
+@import "../../styles/";
+
+.result-field {
+    display: flex;
+    font-size: $font-size-16;
+    justify-content: flex-start;
+    letter-spacing: 1;
+    line-height: 2;
+    padding: 10px;
+  
+    &__image {
+      margin-right: 20px;
+      width: 30%;
+  
+      img {
+        max-width: 100%;
+      }
+    }
+  
+    &__info {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 70%;
+  
+      .title {
+        font-size: 20px;
+        font-weight: $font-weight-600;
+      }
+  
+      .language {
+        font-size: $font-size-14;
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+  
+      .ranking {
+        align-items: center;
+        display: flex;
+  
+        &__star {
+          height: auto;
+          width: 30px;
+        }
+  
+        &__vote {
+          display: flex;
+          flex-direction: column;
+          font-weight: $font-weight-500;
+          justify-content: center;
+          line-height: 1;
+          margin-left: 15px;
+  
+          &-small {
+            font-size: $font-size-12;
+          }
+          &-count {
+            font-size: $font-size-12;
+            margin-top: 5px;
+            color: $grey-200;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .result-field {
+  
+      &__image {
+        width: 50%;
+      }
+  
+      &__info {
+        width: 50%;
+      }
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .result-field {
+      align-items: center;
+      flex-direction: column;
+  
+      &__image {
+        width: 90%;
+      }
+  
+      &__info {
+        width: 90%;
+      }
+    }
+  }
